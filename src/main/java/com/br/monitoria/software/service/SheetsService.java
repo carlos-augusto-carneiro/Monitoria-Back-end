@@ -33,7 +33,7 @@ public class SheetsService {
     private static final String APPLICATION_NAME = "Google Sheets API Java Quickstart";
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
     private static final List<String> SCOPES = Collections.singletonList(SheetsScopes.SPREADSHEETS_READONLY);
-    private static final String CREDENTIALS_FILE_PATH = "/monitoria-arquitetura-a3a2d34dadf0.json";
+    private static final String CREDENTIALS_FILE_PATH = "/etc/secrets/monitoria-arquitetura-a3a2d34dadf0.json";
     private static final String SPREADSHEET_ID = "1g0JtAkmqGjd2mWeK9cMA34V2u1VNxMsrIzpCyxpV7-0"; 
     private static final String RANGE = "TabelaAlunosPontos!A:AG"; 
     private static final String RANGE_2 = "TabelaAlunosPontos2!A:AG";
