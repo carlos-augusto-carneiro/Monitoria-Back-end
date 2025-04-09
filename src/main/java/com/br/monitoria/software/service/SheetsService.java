@@ -2,6 +2,7 @@ package com.br.monitoria.software.service;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
@@ -10,7 +11,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.logging.Logger;
 
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
 import com.br.monitoria.software.dto.Student;
@@ -82,35 +82,27 @@ public class SheetsService {
     private static final int COL_CORRETUDE_TEC = 17;
  
     private HttpRequestInitializer getCredentials() throws IOException {
-        // Verificar se o diretório /etc/secrets existe
-        File secretsDir = new File("/etc/secrets");
-        if (secretsDir.exists() && secretsDir.isDirectory()) {
-            logger.info("Arquivos encontrados em /etc/secrets:");
-            for (String fileName : secretsDir.list()) {
-                logger.info(fileName);
-            }
-        } else {
-            logger.severe("/etc/secrets não existe ou não é um diretório.");
-        }
-
-        // Tentativa de carregar credenciais da variável de ambiente
+        // ... (código de log do diretório /etc/secrets)
+    
         InputStream in;
         String credentialsEnv = System.getenv("GOOGLE_CREDENTIALS_JSON");
+        
         if (credentialsEnv != null && !credentialsEnv.isEmpty()) {
             logger.info("Carregando credenciais de variável de ambiente.");
             in = new ByteArrayInputStream(credentialsEnv.getBytes(StandardCharsets.UTF_8));
         } else {
-            logger.info("Carregando credenciais de arquivo.");
-            // Tentativa de carregar credenciais do arquivo local usando ClassPathResource
-            ClassPathResource resource = new ClassPathResource(CREDENTIALS_FILE_PATH);
-            in = resource.getInputStream();
+            logger.info("Tentando carregar credenciais de arquivo em " + CREDENTIALS_FILE_PATH);
+            File credentialsFile = new File(CREDENTIALS_FILE_PATH);
+            if (credentialsFile.exists()) {
+                in = new FileInputStream(credentialsFile);
+            } else {
+                logger.severe("Arquivo de credenciais não encontrado em " + CREDENTIALS_FILE_PATH);
+                throw new IOException("Credenciais não encontradas (variável de ambiente ou arquivo)");
+            }
         }
-
-        // Criar as credenciais
+    
         GoogleCredentials credentials = ServiceAccountCredentials.fromStream(in)
                 .createScoped(SCOPES);
-
-        // Retornar as credenciais adaptadas
         return new HttpCredentialsAdapter(credentials);
     }
      
