@@ -1,0 +1,107 @@
+[33mcommit ebe466e474393ab3b699eb9d792cf6cd0fb38646[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Tue Nov 26 21:35:17 2024 -0300
+
+    Adiciona credentials.json ao .gitignore
+
+[33mcommit ac81175f74bf6fc3cfdca8b9f46e4343dc780930[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Tue Nov 26 21:32:05 2024 -0300
+
+    Projeto pronto para os alunos
+
+[33mcommit 31a2ce4e9231e78b042ca4eed3ea09dbdec111d4[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Fri Nov 22 11:20:56 2024 -0300
+
+    merge
+
+[33mcommit d914ac753ba932a0ff945ef5a7762c68405aa751[m[33m ([m[1;31morigin/testewindows[m[33m, [m[1;32mtestewindows[m[33m)[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Fri Nov 22 11:18:59 2024 -0300
+
+    Add project
+
+[33mcommit 4389e7a935a9506bff4fb9e79a381038a5355425[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Thu Nov 21 00:33:02 2024 -0300
+
+    add: gif error-triste
+
+[33mcommit c5da4f214126e2db6d3ae67c9a6df9239291e37d[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Wed Nov 20 19:02:44 2024 -0300
+
+    Add student.html
+
+[33mcommit 94144853135e837de521db2f5103a9afce48ecbf[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Wed Nov 20 18:14:38 2024 -0300
+
+    Add: cartela
+
+[33mcommit af68b51cc59e390353a17a6254afbddfb6492f1d[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Wed Nov 20 15:35:40 2024 -0300
+
+    Change alterações
+
+[33mcommit 733888849c24560ac303f1d843066dc1b30e546d[m[33m ([m[1;31morigin/novamain[m[33m, [m[1;32mnovamain[m[33m)[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Wed Nov 20 11:34:54 2024 -0300
+
+    add: background.png
+
+[33mcommit a67aade343d4c76dde7366d0269032dcbf46622d[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Fri Nov 8 14:44:52 2024 -0300
+
+    Add: images
+
+[33mcommit 4539f929b6fa5f0cb3d9e1797297950522620062[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Fri Nov 8 13:57:12 2024 -0300
+
+    Add: images
+
+[33mcommit 40b9fb93337a8777b4f8d8bf79c886addf421628[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Fri Nov 8 10:05:44 2024 -0300
+
+    Add: images
+
+[33mcommit 41cfbdd3c0c7e1278d8bb841dff172e4063f7977[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Wed Nov 6 15:39:46 2024 -0300
+
+    Reverter código e ajustar Navbar com input de pesquisa no final
+
+[33mcommit de50f1d405169f50008cb0f4880bcf223522aa1c[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Sat Nov 2 03:35:24 2024 -0300
+
+    Add: adicionado novo efeito na tela /home
+
+[33mcommit f031df353812debe48a1a42dedf89db025780a60[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Sat Nov 2 01:52:29 2024 -0300
+
+    add: images
+
+[33mcommit bee4bb6aab2bef50a7f2f3d23ca5a5031290f57b[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Tue Oct 29 19:51:49 2024 -0300
+
+    Adicionado a planilha oficial, precia da key no codigo
+
+[33mcommit d314e44743c7aca2753c7257b5e3d6601e7881ad[m
+Author: carlos-augusto-carneiro <devcarlosaugusto@outlook.com>
+Date:   Thu Oct 24 23:00:46 2024 -0300
+
+    Add: Adicionado integração API google com API java
+
+[33mcommit 3b5162d852884bec61991f89e10b55fbb705f64d[m
+Author: Carlos Augusto Carneiro <91989796+carlos-augusto-carneiro@users.noreply.github.com>
+Date:   Thu Oct 24 15:25:43 2024 -0300
+
+    Initial commit
