@@ -47,7 +47,7 @@ public class Student {
         }
         String[] perfisArray = perfis.split(", ");
         StringBuilder formattedPerfis = new StringBuilder();
-        for (int i = 0; i < Math.min(perfisArray.length, 2); i++) {
+        for (int i = 0; i < Math.min(perfisArray.length, 1); i++) {
             if (i > 0) {
                 formattedPerfis.append(", ");
             }
