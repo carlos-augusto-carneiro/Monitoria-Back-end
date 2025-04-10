@@ -9,7 +9,9 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-            .allowedOrigins("http://localhost:8081","https://arquitetura-gamified-cartela.vercel.app") // URL do seu front-end
+            .allowedOrigins("http://localhost:8081"
+                            ,"https://arquitetura-gamified-cartela.vercel.app"
+                            ,"https://arquitetura-gamified-cartela-pkir2wtsf.vercel.app") // URL do seu front-end
             .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
             .allowedHeaders("*")
             .allowCredentials(true)
