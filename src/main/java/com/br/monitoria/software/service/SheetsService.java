@@ -33,7 +33,8 @@ public class SheetsService {
     private static final String APPLICATION_NAME = "Google Sheets API Java Quickstart";
     private static final JsonFactory JSON_FACTORY = GsonFactory.getDefaultInstance();
     private static final List<String> SCOPES = Collections.singletonList(SheetsScopes.SPREADSHEETS_READONLY);
-    private static final String CREDENTIALS_FILE_PATH = "/etc/secrets/monitoria-arquitetura-a3a2d34dadf0.json";
+    private static final String CREDENTIALS_FILE_PATH = "/etc/secrets/monitoria-arquitetura-37f25c2e4480.json";
+    //private static final String CREDENTIALS_FILE_PATH = "src/main/resources/monitoria-arquitetura-37f25c2e4480.json";
     private static final String SPREADSHEET_ID = "1g0JtAkmqGjd2mWeK9cMA34V2u1VNxMsrIzpCyxpV7-0"; 
     private static final String RANGE = "TabelaAlunosPontos!A:AG"; 
     private static final String RANGE_2 = "TabelaAlunosPontos2!A:AG";
@@ -65,22 +66,23 @@ public class SheetsService {
 
     private static final int COL_MATRICULA2 = 0;
     private static final int COL_NOME2 = 1;
-    private static final int COL_ENTREVISTA = 2;
-    private static final int COL_VAL_ENTREVISTA = 3;
-    private static final int COL_4 = 4;
-    private static final int COL_VAL_4 = 5;
-    private static final int COL_C4 = 6;
-    private static final int COL_VAL_C4 = 7;
-    private static final int COL_AVALIACAO_DE_ARQ = 8;
-    private static final int COL_VAL_AVALIACAO_DE_ARQ = 9;
-    private static final int COL_DOJO_4 = 10;
-    private static final int COL_DOJO_C4 = 11;
-    private static final int COL_MELHOR_ENTREVISTA = 13;
-    private static final int COL_CRIATIVIDADE = 14;
-    private static final int COL_RIGOR_ARQUIT = 15;
-    private static final int COL_COMPLETUDE = 16;
-    private static final int COL_CORRETUDE_TEC = 17;
- 
+    private static final int COL_Perguntas_C4 = 2;
+    private static final int COL_VAL_Perguntas_C4 = 3;
+    private static final int COL_Desenvolver_C4 = 4;
+    private static final int COL_VAL_Desenvolver_C4 = 5;
+    private static final int COL_Checklist_C4 = 6;
+    private static final int COL_VAL_Checklist_C4 = 7;
+    private static final int COL_Entrevista2 = 8;
+    private static final int COL_MELHOR_ENTREVISTA = 9;
+    private static final int COL_CRIATIVIDADE = 10;
+    private static final int COL_RIGOR_ARQUIT = 11;
+    private static final int COL_COMPLETUDE = 12;
+    private static final int COL_CORRETUDE_TEC = 13;
+    private static final int COL_FORMS2 = 14;
+    private static final int COL_MEIOPONTO_1 = 16;
+    private static final int COL_MEIOPONTO_2 = 17;
+    private static final int COL_MEIOPONTO_3 = 18;
+
     private HttpRequestInitializer getCredentials() throws IOException {
         // ... (código de log do diretório /etc/secrets)
     
@@ -189,21 +191,22 @@ public class SheetsService {
                 Student2 student = new Student2();
                 student.setMatricula2(Integer.parseInt(row.get(COL_MATRICULA2).toString()));
                 student.setNome2(getValue(row, COL_NOME2));
-                student.setEntrevista(parseInteger(getValue(row, COL_ENTREVISTA)));
-                student.setValEntrevista(parseInteger(getValue(row, COL_VAL_ENTREVISTA)));
-                student.setCol4(parseInteger(getValue(row, COL_4)));
-                student.setVal4(parseInteger(getValue(row, COL_VAL_4)));
-                student.setC4(parseInteger(getValue(row, COL_C4)));
-                student.setValC4(parseInteger(getValue(row, COL_VAL_C4)));
-                student.setAvaliacaoDeArq(parseInteger(getValue(row, COL_AVALIACAO_DE_ARQ)));
-                student.setValAvaliacaoDeArq(parseInteger(getValue(row, COL_VAL_AVALIACAO_DE_ARQ)));
-                student.setDojo4(parseInteger(getValue(row, COL_DOJO_4)));
-                student.setDojoC4(parseInteger(getValue(row, COL_DOJO_C4)));
+                student.setPerguntasc4(parseInteger(getValue(row, COL_Perguntas_C4)));
+                student.setValPerguntasc4(parseInteger(getValue(row, COL_VAL_Perguntas_C4)));
+                student.setDesenvolverC4(parseInteger(getValue(row, COL_Desenvolver_C4)));
+                student.setValDesenvolverC4(parseInteger(getValue(row, COL_VAL_Desenvolver_C4)));
+                student.setChecklist(parseInteger(getValue(row, COL_Checklist_C4)));
+                student.setValChecklist(parseInteger(getValue(row, COL_VAL_Checklist_C4)));
+                student.setEntrevista(parseInteger(getValue(row, COL_Entrevista2)));
                 student.setMelhorEntrevista(parseInteger(getValue(row, COL_MELHOR_ENTREVISTA)));
                 student.setCriatividade(parseInteger(getValue(row, COL_CRIATIVIDADE)));
                 student.setRigorArquit(parseInteger(getValue(row, COL_RIGOR_ARQUIT)));
                 student.setCompletude(parseInteger(getValue(row, COL_COMPLETUDE)));
                 student.setCorretudeTec(parseInteger(getValue(row, COL_CORRETUDE_TEC)));
+                student.setForms2(parseInteger(getValue(row, COL_FORMS2)));
+                student.setMeioPonto1(getValue(row, COL_MEIOPONTO_1));
+                student.setMeioPonto2(getValue(row, COL_MEIOPONTO_2));
+                student.setMeioPonto3(getValue(row, COL_MEIOPONTO_3));
                 return student;
             }
         }
